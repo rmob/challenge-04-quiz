@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    font-family: sans-serif;
+    width: 90%
+}
+
+header .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 2rem auto;
+    
+}
+
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.start-btn {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    background: #bbff33;
+    border: none;
+    border-radius: .5rem;
+    padding: 1rem;
+    color: white;
+    font-size: 1.2rem;
+
+}
+
+.start-btn:hover {
+    background-color: black;
+}
+
+.newb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-weight: bolder;
+    font-size: 20px;
+    height: 10rem;
+    width: 300px;
+    background-color: green;
+    
+}
+
+
+
+.quiz-box {
+    display: none;
+    flex-direction: column;
+    /* justify-content: center; */
+    margin: 5rem auto;
+    width: 50%;
+    padding: 2rem 3rem;
+    
+
+}
+
+.choices {
+    font-size: 1.2rem;
+}
+
+ul {
+    list-style: none;
+    
+}
+
+li {
+    display: flex;
+    margin: 1rem auto;
+    background-color: aliceblue;
+    max-width: 50%;
+    padding: 1rem;
+    border-radius: 5px;
+
+}
+
+li:hover {
+    background-color: #ccf;
+}
+
+footer {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    width: 75%;
+    margin: 5rem auto;
+    padding-bottom: 125px;
+    border: none;
+    border-radius: 10px;
+    
+
+}
+
+h3 {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   font-size: 5rem;
+
+}
+
+.playAgain-btn {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    color:black;
+    padding: 2rem;
+    border-radius: 5px;
+    border: none;
+    width: 25%;
+    font-size: 1.5rem;
+    box-shadow: 0 0 10px 5px  rgba(239, 232, 232, 0.575);
+    
+}
+
+.playAgain-btn:hover {
+    background-color: rgba(230, 230, 242, 0.993);
+    color: white;
+    cursor: pointer;
+}
+
+#finish {
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: 5rem auto;
+}
+
+p {
+    display: flex;
+    margin: 2rem auto;
+}
+
+#name-entry {
+    border: none;
+    background-color: #cff;
+    padding: 1rem
+}
+
+.hi-scores {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
