@@ -28,6 +28,7 @@ clockEl.textContent = " ";
 var footerH3El = document.querySelector('h3')
 var quizBoxEl = document.querySelector('.quiz-box')
 var questionEl = document.getElementById('question')
+var scoreEl = document.getElementById('score')
 var li1 = document.getElementById('choice-one')
 var li2 = document.getElementById('choice-two')
 var li3 = document.getElementById('choice-three')
@@ -37,7 +38,7 @@ var correctAnswers = 0
 var wrongAnswers = 0
 var newBoxEl;
 mainEl.appendChild(parEl)
-parEl.textContent = 'hello this is a quiz motherfuckers its timed and everything good luck';
+parEl.textContent = 'hello this is a quiz its timed and everything good luck';
 var startBtn = document.createElement('button');
 var playAgainBtn = document.createElement('button')
 playAgainBtn.innerHTML = 'Try again?';
@@ -46,6 +47,7 @@ mainEl.appendChild(startBtn)
 startBtn.setAttribute('class', 'start-btn')
 startBtn.innerHTML = 'Start Quiz';
 var timer;
+var nameEntryEl = document.getElementById('name-entry').value
 
 // disappear the .main div
 
@@ -102,9 +104,16 @@ var popQuestion1 = function () {
     li3.innerHTML = objectArray[0].choices[2];
     li4.innerHTML = objectArray[0].choices[3];
     li3.addEventListener('click', function () {
-        popQuestion2();
-        correctAnswers++
+        if (li3 == li3) {
+            popQuestion2();
+        correctAnswers++ 
         console.log(correctAnswers)
+        }
+        else if (!li3 === li3) {
+            wrongAnswers++
+            popQuestion2
+            console.log(wrongAnswers)
+        }
 
     })
     
@@ -139,7 +148,8 @@ var popQuestion3 = function () {
 
 var revealFinishEl = function () {
     finishEl.setAttribute('style', 'display: flex');
-    quizBoxEl.setAttribute('style', 'display: none')
+    quizBoxEl.setAttribute('style', 'display: none');
+    scoreEl.innerHTML = correctAnswers;
 }
 
 
@@ -167,3 +177,12 @@ playAgainBtn.addEventListener('click', function () {
 })
 
 
+console.log(window.localStorage.setItem('name', nameEntryEl))
+
+
+//TRY THIS CODE FOR QUIZ
+// parentEl.addEventListener('click', li1, li2, li3, li4, function() {
+//     if (this === li1) {
+//         wrongAnswers++
+//     }
+// })
